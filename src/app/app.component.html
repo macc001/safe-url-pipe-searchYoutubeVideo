@@ -1,19 +1,19 @@
-<ul *ngIf="results$ | async as results; else elseBlock">
-  <pre>{{ results | json }}</pre>
-  <li *ngFor="let item of results">
-    <iframe
-      [class.thumbnail]="thumbnail"
-      [src]="item.vidoeUrl | safeUrl"
-      width="560"
-      height="315"
-      frameborder="0"
-      webkitallowfullscreen
-      mozallowfullscreen
-      allowfullscreen
-    >
-    </iframe>
-    <p>{{ item.title }}</p>
-  </li>
-</ul>
+<div class="container pt-3 text-center">
+  <h1>Videos sobre programación</h1>
+</div>
+<div class="container" *ngFor="let item of idVideos">
+  <strong>{{ item.title }}</strong>
+  <iframe
+    [src]="item.id | safeUrl"
+    width="560"
+    height="315"
+    frameborder="0"
+    webkitallowfullscreen
+    mozallowfullscreen
+    allowfullscreen
+  >
+  </iframe>
 
-<ng-template #elseBlock> Something went wrong </ng-template>
+  <br />
+  <br /><br />
+</div>
