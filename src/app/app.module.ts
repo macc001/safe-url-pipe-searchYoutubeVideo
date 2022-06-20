@@ -4,12 +4,11 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { HelloComponent } from './hello.component';
 import { SafeUrlPipe } from './safe-url.pipe';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, HttpClientModule ],
-  declarations: [ AppComponent, HelloComponent, SafeUrlPipe ],
-  bootstrap:    [ AppComponent ]
+  imports: [BrowserModule, FormsModule, HttpClientModule],
+  declarations: [AppComponent, SafeUrlPipe],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
